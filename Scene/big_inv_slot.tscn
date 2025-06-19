@@ -14,7 +14,7 @@ offset_right = -1803.0
 offset_bottom = -937.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3.37736, 3.39152)
+scale = Vector2(3.73962, 3.91168)
 script = ExtResource("1_qjker")
 
 [node name="IconInv3" type="Sprite2D" parent="."]

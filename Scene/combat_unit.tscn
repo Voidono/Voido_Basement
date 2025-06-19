@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://b1cla7ekuinpv"]
 
 [ext_resource type="Texture2D" uid="uid://cfncosbpijfqk" path="res://model attack/model attack/Sprite-0002.png" id="1_h7m5r"]
-[ext_resource type="Script" uid="uid://bfjdr4grtgtw7" path="res://Scene/combat_unit.gd" id="1_t5tbv"]
+[ext_resource type="Script" uid="uid://bfjdr4grtgtw7" path="res://Scripts/combat_unit.gd" id="1_t5tbv"]
 [ext_resource type="Texture2D" uid="uid://1gn7vr4duway" path="res://model attack/model attack/Sprite-0003.png" id="2_df6hm"]
 [ext_resource type="Texture2D" uid="uid://crwl04uumxtfk" path="res://model attack/model attack/Sprite-0004.png" id="3_bbwmr"]
 [ext_resource type="Texture2D" uid="uid://bt1v1lgtam04m" path="res://model attack/model attack/Sprite-0005.png" id="4_w4ji4"]
