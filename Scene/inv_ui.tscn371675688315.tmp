@@ -1,0 +1,288 @@
+[gd_scene load_steps=12 format=3 uid="uid://dii8lsoi8wfhr"]
+
+[ext_resource type="Script" uid="uid://vm747d8apovr" path="res://Scripts/inv_ui.gd" id="1_x4q7d"]
+[ext_resource type="Texture2D" uid="uid://d36vbxsu01rf7" path="res://Inventory/Inventory_res/icon_inv4.png" id="2_ynrc3"]
+[ext_resource type="PackedScene" uid="uid://557ork8ealjg" path="res://Scene/inv_ui_slot.tscn" id="3_3d5uf"]
+[ext_resource type="Texture2D" uid="uid://dpeg2wms8knau" path="res://Inventory/Inventory_res/background_shadow.png" id="4_7es7y"]
+[ext_resource type="PackedScene" uid="uid://cruifly2l4tvi" path="res://Scene/big_inv_slot.tscn" id="4_8cffp"]
+[ext_resource type="PackedScene" uid="uid://bdhxyk36nco2d" path="res://Scene/name_inv_slot.tscn" id="7_87s5a"]
+[ext_resource type="Texture2D" uid="uid://cvcfhaylg5rp6" path="res://Inventory/Inventory_res/icon_inv1.png" id="8_71m6q"]
+[ext_resource type="Texture2D" uid="uid://djmo5usanlqj8" path="res://icon.svg" id="8_mwjpt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwjpt"]
+font_size = 43
+
+[sub_resource type="FontFile" id="FontFile_fsqy7"]
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_jxxsm"]
+font = SubResource("FontFile_fsqy7")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 17
+outline_color = Color(1, 1, 1, 0)
+
+[node name="Inv_ui" type="Control"]
+y_sort_enabled = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = -12.0
+offset_right = 1923.0
+offset_bottom = 1071.0
+script = ExtResource("1_x4q7d")
+
+[node name="Inv_slot" type="NinePatchRect" parent="."]
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 322.0
+offset_top = 154.0
+offset_right = 1365.0
+offset_bottom = 864.0
+texture = ExtResource("2_ynrc3")
+
+[node name="Inv_slot_container" type="GridContainer" parent="Inv_slot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -414.5
+offset_top = -258.0
+offset_right = 414.5
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 7
+
+[node name="Inv_ui_slot1" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot2" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot3" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot4" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot5" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot6" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot7" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot8" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot9" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot10" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot11" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot12" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot13" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot14" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot15" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot16" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot17" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot18" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot19" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot20" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot21" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot22" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot23" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot24" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot25" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot26" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot27" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Inv_ui_slot28" parent="Inv_slot/Inv_slot_container" instance=ExtResource("3_3d5uf")]
+layout_mode = 2
+
+[node name="Big_slot" type="NinePatchRect" parent="."]
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 22.0
+offset_right = 238.0
+offset_bottom = 1084.0
+
+[node name="Big_inv_container" type="GridContainer" parent="Big_slot"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -409.0
+offset_right = 153.0
+offset_bottom = 391.0
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+
+[node name="Big_inv_slot" parent="Big_slot/Big_inv_container" instance=ExtResource("4_8cffp")]
+layout_mode = 2
+
+[node name="Big_inv_slot2" parent="Big_slot/Big_inv_container" instance=ExtResource("4_8cffp")]
+layout_mode = 2
+
+[node name="Big_inv_slot3" parent="Big_slot/Big_inv_container" instance=ExtResource("4_8cffp")]
+layout_mode = 2
+
+[node name="Big_inv_slot4" parent="Big_slot/Big_inv_container" instance=ExtResource("4_8cffp")]
+layout_mode = 2
+
+[node name="Big_inv_slot5" parent="Big_slot/Big_inv_container" instance=ExtResource("4_8cffp")]
+layout_mode = 2
+
+[node name="IconInv4" type="Sprite2D" parent="Big_slot"]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(835, 575)
+scale = Vector2(1.27328, 1.5879)
+texture = ExtResource("2_ynrc3")
+
+[node name="BackgroundShadow" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -10
+y_sort_enabled = true
+position = Vector2(960, 546)
+texture = ExtResource("4_7es7y")
+metadata/_edit_lock_ = true
+
+[node name="Name_inv_slot" parent="." instance=ExtResource("7_87s5a")]
+layout_mode = 1
+offset_left = 1562.0
+offset_top = 91.0
+offset_right = -100.0
+offset_bottom = -588.0
+
+[node name="Bottom" type="Sprite2D" parent="."]
+position = Vector2(844, 1008.5)
+scale = Vector2(1.05466, 0.456451)
+texture = ExtResource("2_ynrc3")
+
+[node name="Page_num" type="Label" parent="."]
+top_level = true
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.041
+offset_left = 776.0
+offset_top = 881.0
+offset_right = 816.28
+offset_bottom = 940.0
+text = "<  1  >"
+label_settings = SubResource("LabelSettings_mwjpt")
+uppercase = true
+
+[node name="Page_right" type="Button" parent="Page_num"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038
+anchor_top = -0.03
+anchor_right = 0.038
+anchor_bottom = -0.03
+offset_left = 97.478
+offset_top = 0.77
+offset_right = 162.478
+offset_bottom = 60.77
+
+[node name="Page_left" type="Button" parent="Page_num"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = -0.07
+anchor_right = 0.027
+anchor_bottom = -0.07
+offset_left = -38.213
+offset_top = 7.13
+offset_right = 18.787
+offset_bottom = 62.13
+
+[node name="Cathegory" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 83.0
+offset_right = 1147.0
+offset_bottom = 161.0
+texture = ExtResource("8_71m6q")
+region_rect = Rect2(11, 14.5, 87, 98)
+
+[node name="Weapons" type="Label" parent="Cathegory"]
+top_level = true
+layout_mode = 0
+offset_left = 520.0
+offset_top = 71.0
+offset_right = 1149.0
+offset_bottom = 147.0
+text = "Weapons"
+label_settings = SubResource("LabelSettings_jxxsm")
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Node2D" parent="."]
+position = Vector2(1864.74, 55.5)
+scale = Vector2(0.73039, 0.601563)
+
+[node name="Button" type="Button" parent="Sprite2D"]
+offset_left = -56.0
+offset_top = -47.0
+offset_right = 62.0
+offset_bottom = 64.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(9.93306, -2.49351)
+texture = ExtResource("8_mwjpt")
+
+[connection signal="button_down" from="Sprite2D/Button" to="." method="_on_button_button_down"]

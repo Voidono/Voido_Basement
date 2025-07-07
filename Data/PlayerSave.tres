@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Data/Playerdata.gd" id="1_85074"]
+
+[resource]
+script = ExtResource("1_85074")
+speed = 200
+health = 100
+SavePos = Vector2(1251.92, 573.77)

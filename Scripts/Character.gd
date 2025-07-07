@@ -6,16 +6,28 @@ extends CharacterBody2D
 
 @export var inv: Inv
 
+signal update_ui
+
+var save_file_path = "res://Data/"
+var save_file_name = "PlayerSave.tres"
+var playerData = PlayerData.new()
+
 var dir = 0 # Store the last direction outside the function
 var Interact = false
+
+func _ready():
+	verify_save_directory(save_file_path)
+	
+func verify_save_directory(path: String):
+	DirAccess.make_dir_absolute(path)
 
 func _physics_process(delta):
 	var directionc  = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var directionp = joystick.posVector
 	if directionc:
-		velocity = directionc * 200
+		velocity = directionc * playerData.speed
 	elif directionp:
-		velocity = directionp * 200
+		velocity = directionp * playerData.speed
 	else:
 		velocity = Vector2(0,0)
 		
@@ -65,9 +77,29 @@ func _physics_process(delta):
 				anim.play("Idle_Down")
 		
 	move_and_slide()
+func _process(delta):
+	if Input.is_action_just_pressed("Save"):
+		save()
+		$"Save label".visible = true
+		$"Load label".visible = false
+	if Input.is_action_just_pressed("Load"):
+		load_data()
+		$"Load label".visible = true
+		$"Save label".visible = false
+	emit_signal("update_ui", playerData.health, self.position)
+	playerData.UpdatePos(self.position)
 
+func load_data():
+	playerData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	on_start_load()
+	print("loaded")
 
+func on_start_load():
+	self.position = playerData.SavePos
 
+func save():
+	ResourceSaver.save(playerData, save_file_path + save_file_name)
+	print("save")
 
 func collect(item):
 	inv.insert(item)
@@ -92,3 +124,7 @@ func _on_soulbutton_button_down():
 
 func _on_soulbutton_button_up():
 	pass # Replace with function body.
+
+
+
+		

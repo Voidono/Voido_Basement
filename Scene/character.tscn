@@ -187,6 +187,24 @@ metadata/_edit_use_anchors_ = true
 [node name="Menu_button" parent="Camera2D" instance=ExtResource("17_bbgwi")]
 position = Vector2(-299, -261)
 
+[node name="Load label" type="Label" parent="."]
+visible = false
+offset_left = 373.0
+offset_top = -267.0
+offset_right = 476.0
+offset_bottom = -244.0
+text = "Game loaded"
+
+[node name="Timer" type="Timer" parent="Load label"]
+
+[node name="Save label" type="Label" parent="."]
+visible = false
+offset_left = 373.0
+offset_top = -267.0
+offset_right = 413.0
+offset_bottom = -244.0
+text = "Game saved"
+
 [connection signal="body_shape_entered" from="Flan/DetectionArea" to="." method="_on_detection_area_body_shape_entered"]
 [connection signal="body_shape_exited" from="Flan/DetectionArea" to="." method="_on_detection_area_body_shape_exited"]
 [connection signal="button_down" from="Camera2D/Action_button/ButtonTest/Button" to="." method="_on_button_button_down"]

@@ -9,7 +9,7 @@ func _ready():
 	$AnimatedSprite2D.connect("animation_finished", _on_animated_sprite_2d_animation_finished)
 
 func _process(delta):
-	if player_in_area and Input.is_action_just_pressed("Action"):
+	if player_in_area and player.Interact:
 		$AnimatedSprite2D.play("Chest")
 
 func drop_item():
