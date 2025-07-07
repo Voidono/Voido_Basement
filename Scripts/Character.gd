@@ -20,9 +20,6 @@ func _physics_process(delta):
 		velocity = Vector2(0,0)
 		
 	if Interact == true:
-		print("Button pressed")
-	# Update the chat detection range
-	if Interact == true:
 		pass
 	
 # Update the animation when the character is moving

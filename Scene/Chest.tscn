@@ -1,37 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://yex2xilktl2o"]
+[gd_scene load_steps=8 format=3 uid="uid://dorm5aw0kv0b7"]
 
-[ext_resource type="Script" uid="uid://c0du88rben04i" path="res://Scripts/quest_item.gd" id="1_id6lg"]
-[ext_resource type="Texture2D" uid="uid://djmo5usanlqj8" path="res://icon.svg" id="1_y75mo"]
-[ext_resource type="Script" uid="uid://cmgb4o0863yqy" path="res://Inventory/Inventory_item.gd" id="2_wu3tn"]
-[ext_resource type="Texture2D" uid="uid://b4ri108rd1bk1" path="res://Res/Item/apple.png" id="3_f40vd"]
+[ext_resource type="Texture2D" uid="uid://dx3xcvenhlg4j" path="res://Res/Item/chest_box1.png" id="1_bp1or"]
+[ext_resource type="Script" uid="uid://c5strjq34kyls" path="res://Scripts/chest.gd" id="1_trlyu"]
+[ext_resource type="Resource" uid="uid://bcdcjvnsomg3" path="res://Inventory/Item/Apple.tres" id="2_n3nte"]
+[ext_resource type="Texture2D" uid="uid://lnskrawis1rr" path="res://Res/Item/chest_box2.png" id="2_trlyu"]
+[ext_resource type="Texture2D" uid="uid://f0xc7aqcvqq" path="res://Res/Item/chest_box3.png" id="3_x7mpe"]
 
-[sub_resource type="Resource" id="Resource_i61eo"]
-script = ExtResource("2_wu3tn")
-name = "Apple"
-texture = ExtResource("3_f40vd")
-metadata/_custom_type_script = "uid://cmgb4o0863yqy"
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv3sb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bp1or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_trlyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x7mpe")
+}],
+"loop": false,
+"name": &"Chest",
+"speed": 5.0
+}]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd1f5"]
-size = Vector2(115, 114)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4glhk"]
-radius = 105.119
+[sub_resource type="CircleShape2D" id="CircleShape2D_day8l"]
+radius = 49.0102
 
 [node name="Chest" type="Node2D"]
-scale = Vector2(0.437783, 0.424823)
-script = ExtResource("1_id6lg")
-item = SubResource("Resource_i61eo")
+script = ExtResource("1_trlyu")
+item = ExtResource("2_n3nte")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-6, -4)
-texture = ExtResource("1_y75mo")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bv3sb")
+animation = &"Chest"
+frame_progress = 0.437245
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.5, -5)
-shape = SubResource("RectangleShape2D_hd1f5")
+[node name="Interaction_area" type="Area2D" parent="."]
 
-[node name="Item_collection" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_area"]
+position = Vector2(-1, 12)
+shape = SubResource("CircleShape2D_day8l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_collection"]
-position = Vector2(-5, 1)
-shape = SubResource("CircleShape2D_4glhk")
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Interaction_area" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Interaction_area" to="." method="_on_interaction_area_body_exited"]

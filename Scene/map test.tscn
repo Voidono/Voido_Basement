@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dy2uh6wabw7w2" path="res://Res/Map/villager_house.png" id="7_04ks0"]
 [ext_resource type="PackedScene" uid="uid://byjo10yl8fd8y" path="res://Scene/character.tscn" id="8_63g2b"]
 [ext_resource type="Texture2D" uid="uid://y1pys563f0q1" path="res://Res/Map/bush2.png" id="9_gj5ei"]
-[ext_resource type="PackedScene" uid="uid://yex2xilktl2o" path="res://Scene/Chest.tscn" id="9_lb026"]
 [ext_resource type="Texture2D" uid="uid://rte2bovp0ujr" path="res://Res/Map/tree2.png" id="11_b8eas"]
+[ext_resource type="PackedScene" uid="uid://dorm5aw0kv0b7" path="res://Scene/chest.tscn" id="13_sne7a"]
 
 [sub_resource type="GDScript" id="GDScript_sne7a"]
 
@@ -13613,5 +13613,17 @@ position = Vector2(1666, 409)
 platform_floor_layers = 4294967043
 platform_wall_layers = 3
 
-[node name="QuestItem" parent="." instance=ExtResource("9_lb026")]
-position = Vector2(1826, 421)
+[node name="Chest" parent="." instance=ExtResource("13_sne7a")]
+position = Vector2(1864, 406)
+
+[node name="Chest2" parent="." instance=ExtResource("13_sne7a")]
+position = Vector2(1667, 550)
+
+[node name="Chest3" parent="." instance=ExtResource("13_sne7a")]
+position = Vector2(1673, 231)
+
+[node name="Chest4" parent="." instance=ExtResource("13_sne7a")]
+position = Vector2(1399, 390)
+
+[node name="Chest5" parent="." instance=ExtResource("13_sne7a")]
+position = Vector2(1442, 559)

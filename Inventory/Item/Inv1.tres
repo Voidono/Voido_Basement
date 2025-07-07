@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=5 format=3 uid="uid://dc3pa2l1v1cfi"]
+
+[ext_resource type="Script" uid="uid://b3i14qx1dawaw" path="res://Inventory/inventory.gd" id="1_h2g35"]
+[ext_resource type="Script" uid="uid://dsqiuur7jlyld" path="res://Inventory/Inv_slot.gd" id="2_vn8lv"]
+[ext_resource type="Resource" uid="uid://bcdcjvnsomg3" path="res://Inventory/Item/Apple.tres" id="3_xamnv"]
+
+[sub_resource type="Resource" id="Resource_3t8uh"]
+script = ExtResource("2_vn8lv")
+item = ExtResource("3_xamnv")
+amount = 0
+metadata/_custom_type_script = "uid://dsqiuur7jlyld"
+
+[resource]
+script = ExtResource("1_h2g35")
+slots = Array[ExtResource("2_vn8lv")]([SubResource("Resource_3t8uh"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://b3i14qx1dawaw"

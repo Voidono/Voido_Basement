@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://beluwa2x5tos7"]
 
 [ext_resource type="Script" uid="uid://dtqch8sfc3764" path="res://Scripts/UI.gd" id="1_gamjr"]
-[ext_resource type="Texture2D" uid="uid://b81xmgq02bnst" path="res://Res/Character/anim-voido/frame.png" id="2_3iunn"]
+[ext_resource type="Texture2D" uid="uid://b81xmgq02bnst" path="res://Res/UI/frame.png" id="2_3iunn"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

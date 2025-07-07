@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://byjo10yl8fd8y"]
 
 [ext_resource type="Script" uid="uid://bssf0nmmchy6x" path="res://Scripts/Character.gd" id="1_tysx3"]
-[ext_resource type="Resource" uid="uid://gjcy5h0f61j8" path="res://Inventory/Item/Player_inv1.tres" id="2_087ws"]
+[ext_resource type="Resource" uid="uid://bq25mi4q4b70b" path="res://Inventory/Item/Inv_2.tres" id="2_087ws"]
 [ext_resource type="Texture2D" uid="uid://beikm4vyo03u8" path="res://Res/Character/anim-voido/walk/Voidowalk1.png" id="3_087ws"]
 [ext_resource type="Texture2D" uid="uid://bsk8lq5ebn80c" path="res://Res/Character/anim-voido/walk/Voidowalk5.png" id="4_inwfv"]
 [ext_resource type="Texture2D" uid="uid://cpnyh6i7o3jcb" path="res://Res/Character/anim-voido/walk/Voidowalk9.png" id="5_cmtgg"]

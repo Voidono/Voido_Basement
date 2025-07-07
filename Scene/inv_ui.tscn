@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dii8lsoi8wfhr"]
+[gd_scene load_steps=12 format=3 uid="uid://dii8lsoi8wfhr"]
 
 [ext_resource type="Script" uid="uid://vm747d8apovr" path="res://Scripts/inv_ui.gd" id="1_x4q7d"]
 [ext_resource type="Texture2D" uid="uid://d36vbxsu01rf7" path="res://Inventory/Inventory_res/icon_inv4.png" id="2_ynrc3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cruifly2l4tvi" path="res://Scene/big_inv_slot.tscn" id="4_8cffp"]
 [ext_resource type="PackedScene" uid="uid://bdhxyk36nco2d" path="res://Scene/name_inv_slot.tscn" id="7_87s5a"]
 [ext_resource type="Texture2D" uid="uid://cvcfhaylg5rp6" path="res://Inventory/Inventory_res/icon_inv1.png" id="8_71m6q"]
+[ext_resource type="Texture2D" uid="uid://djmo5usanlqj8" path="res://icon.svg" id="8_mwjpt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mwjpt"]
 font_size = 43
@@ -269,3 +270,19 @@ offset_bottom = 147.0
 text = "Weapons"
 label_settings = SubResource("LabelSettings_jxxsm")
 horizontal_alignment = 1
+
+[node name="Sprite2D" type="Node2D" parent="."]
+position = Vector2(1864.74, 55.5)
+scale = Vector2(0.73039, 0.601563)
+
+[node name="Button" type="Button" parent="Sprite2D"]
+offset_left = -56.0
+offset_top = -47.0
+offset_right = 62.0
+offset_bottom = 64.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(9.93306, -2.49351)
+texture = ExtResource("8_mwjpt")
+
+[connection signal="button_down" from="Sprite2D/Button" to="." method="_on_button_button_down"]
